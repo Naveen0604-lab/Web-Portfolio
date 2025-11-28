@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rayaprolu Naveen — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="avatar">RN</div>
+        <div class="brand-text">
+          <div class="name">Rayaprolu Naveen</div>
+          <div class="role">First-year Student • Web Developer</div>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="buttons">
+        <!-- LinkedIn (your link) -->
+        <a class="btn outline" href="https://www.linkedin.com/in/rayaprolu-naveen-1989a034b" target="_blank" rel="noopener">LinkedIn</a>
+        <!-- Resume (use uploaded file in same folder) -->
+        <a class="btn primary" href="Naveen.CV.docx" target="_blank" rel="noopener">Resume</a>
+        <button class="menu-toggle" aria-hidden="true">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HOME -->
+    <section id="home" class="panel hero">
+      <div class="hero-left">
+        <h1>Hi, I’m <span class="accent">Rayaprolu</span> Naveen</h1>
+        <p class="lead">First-year student at New Ebenezer Institute of Technology. I build small web projects to learn HTML, CSS, and JavaScript (practicing accessibility and responsive design).</p>
+        <div class="cta">
+          <a class="btn outline" href="https://www.linkedin.com/in/rayaprolu-naveen-1989a034b" target="_blank" rel="noopener">Open LinkedIn</a>
+          <a class="btn primary" href="Naveen.CV.docx" target="_blank" rel="noopener">Download Resume</a>
+          <a class="btn ghost" href="mailto:rayaprolunaveen12@gmail.com">Email me</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- Use the profile image you uploaded (put profile.jpg in same folder) -->
+        <div class="photo-card" role="img" aria-label="Profile photo">
+          <img src="profile.jpg" alt="Rayaprolu Naveen profile photo" class="profile-photo" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="panel">
+      <h2>About me</h2>
+      <p>Curious first-year student learning web development. I enjoy building small projects to practice HTML, CSS, and JavaScript. Currently exploring responsive layouts, basic animations, and accessibility.</p>
+
+      <ul class="cards">
+        <li><strong>Education</strong><span>New Ebenezer Institute of Technology — First Year</span></li>
+        <li><strong>Interests</strong><span>Web dev · UI/UX · Coding challenges</span></li>
+        <li><strong>Contact</strong><span>rayaprolunaveen12@gmail.com</span></li>
+      </ul>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="panel">
+      <h2>Projects</h2>
+      <div class="grid">
+
+        <article class="card">
+          <h3>Portfolio Website</h3>
+          <p class="muted">This static portfolio (HTML + CSS). Smooth scroll and responsive layout.</p>
+        </article>
+
+      </div>
+      <p class="hint">This Is My Portfolio</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="panel">
+      <h2>Skills</h2>
+      <div class="skill">
+        <label>HTML</label>
+        <div class="bar"><span class="fill" style="width:85%"></span></div>
+      </div>
+
+      <div class="skill">
+        <label>CSS</label>
+        <div class="bar"><span class="fill" style="width:75%"></span></div>
+      </div>
+
+      <div class="skill">
+        <label>JavaScript</label>
+        <div class="bar"><span class="fill" style="width:65%"></span></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="panel">
+      <h2>Get in touch</h2>
+      <p>If you'd like to collaborate or just say hi, send an email or check my LinkedIn.</p>
+      <div class="contact-row">
+        <a class="btn outline" href="mailto:rayaprolunaveen12@gmail.com">Email me</a>
+        <a class="btn outline" href="https://www.linkedin.com/in/rayaprolu-naveen-1989a034b" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn primary" href="Naveen.CV.docx" target="_blank" rel="noopener">Resume</a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div>© <span id="year"></span> Rayaprolu Naveen — First-year Student</div>
+    </footer>
+  </main>
+
+  <script>
+    // update footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle (small behavior)
+    document.querySelectorAll('.menu-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const nav = document.querySelector('.main-nav');
+        nav.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
